@@ -117,7 +117,7 @@ public class BinarySearchTree
 		}  
 		else
 		{  
-			System.out.print(n.data + " ");  
+			//System.out.print(n.data + " ");  
 			if(n.left!= null)
 			{
 				preOrderTraverse(n.left);  
@@ -144,7 +144,7 @@ public class BinarySearchTree
 			{
 				inOrderTraverse(n.left);  
 			}
-			System.out.print(n.data + " ");  
+			//System.out.print(n.data + " ");  
 			if(n.right!= null)
 			{
 				inOrderTraverse(n.right);  
@@ -170,7 +170,7 @@ public class BinarySearchTree
 			{
 				postOrderTraverse(n.right);  
 			}
-			System.out.print(n.data + " ");  
+			//System.out.print(n.data + " ");  
 		}
 	}  
 

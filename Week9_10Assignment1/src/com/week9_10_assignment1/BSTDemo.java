@@ -11,10 +11,23 @@ package com.week9_10_assignment1;
  *
  **/
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 
 public class BSTDemo 
 {
+	private static void save(String data) {
+		try {
+		      FileWriter myWriter = new FileWriter("./results.txt",true);
+		      myWriter.write(data+"\n");
+		      myWriter.close();
+		      //System.out.println("Successfully wrote to the file.");
+		    } catch (IOException e) {
+		      System.out.println("An error occurred.");
+		      e.printStackTrace();
+		    }
+	}
 	private static void PRE(BinarySearchTree bst) {
 		System.out.print("PreOrder Traverse:\t");
 		long start = System.nanoTime();
@@ -22,6 +35,8 @@ public class BSTDemo
 		long end = System.nanoTime();
         long duration = end - start;
         System.out.printf("Duration: %,d nanoseconds %n", duration);
+        save("PreOrder Traverse: "+String.valueOf(duration)+" Nanoseconds");
+        System.out.println();
 	}
 	private static void IOT(BinarySearchTree bst) {
 		long start = System.nanoTime();
@@ -30,6 +45,8 @@ public class BSTDemo
 		long end = System.nanoTime();
         long duration = end - start;
         System.out.printf("Duration: %,d nanoseconds %n", duration);
+        save("InOrder Traverse: "+String.valueOf(duration)+" Nanoseconds");
+        System.out.println();
 	}
 	private static void POST(BinarySearchTree bst) {
 		long start = System.nanoTime();
@@ -38,6 +55,8 @@ public class BSTDemo
 		long end = System.nanoTime();
         long duration = end - start;
         System.out.printf("Duration: %,d nanoseconds %n", duration);
+        save("PostOrder Traverse: "+String.valueOf(duration)+" Nanoseconds");
+        System.out.println();
 	}
 	public static void main(String[] args) 
 	{
@@ -52,12 +71,14 @@ public class BSTDemo
         		bst.insert(rand.nextInt((max - min) + 1) + min);     
         	}
         	System.out.println(i);
+        	save("number of integers in Tree "+String.valueOf(numIters[i]));
         	PRE(bst);
 			System.out.println();
 			IOT(bst);
 			System.out.println();
 			POST(bst);
 			bst = new BinarySearchTree();
+			
 			
 			/*
 			BSTNode searchResults  = bst.search(bst.root,4);

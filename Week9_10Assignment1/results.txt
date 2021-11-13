@@ -1,0 +1,28 @@
+number of integers in Tree 10
+PreOrder Traverse: 3901 Nanoseconds
+InOrder Traverse: 36001 Nanoseconds
+PostOrder Traverse: 28300 Nanoseconds
+number of integers in Tree 100
+PreOrder Traverse: 4900 Nanoseconds
+InOrder Traverse: 16300 Nanoseconds
+PostOrder Traverse: 22200 Nanoseconds
+number of integers in Tree 1000
+PreOrder Traverse: 59399 Nanoseconds
+InOrder Traverse: 69001 Nanoseconds
+PostOrder Traverse: 91600 Nanoseconds
+number of integers in Tree 10000
+PreOrder Traverse: 272500 Nanoseconds
+InOrder Traverse: 191200 Nanoseconds
+PostOrder Traverse: 298500 Nanoseconds
+number of integers in Tree 100000
+PreOrder Traverse: 2173500 Nanoseconds
+InOrder Traverse: 1525100 Nanoseconds
+PostOrder Traverse: 2057500 Nanoseconds
+number of integers in Tree 1000000
+PreOrder Traverse: 15062700 Nanoseconds
+InOrder Traverse: 13870199 Nanoseconds
+PostOrder Traverse: 13170700 Nanoseconds
+number of integers in Tree 10000000
+PreOrder Traverse: 210347800 Nanoseconds
+InOrder Traverse: 210213500 Nanoseconds
+PostOrder Traverse: 210049899 Nanoseconds
